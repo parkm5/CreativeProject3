@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+<div id = "dolph"></div>
+<h1>Color Changer</h1>
+<p>Change the value for a preview of the color</p>
+<p>Use color names, HEX values, or RGB values, whatever you want</p>
+<p>When you're happy with it, press submit!</p>
+
+<div ng-app="" ng-init="myCol='lightblue'">
+
+<input id = "inputColor" style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+<input id="button" onclick="changeIt()" type="submit" value="Submit">
+
+</div>
+
+
+<p></p>
+
+<p></p>
+
+<div id = "dolph"></div>
+</body>
+
+<script>
+function changeIt() {
+	var x, text;
+    x = document.getElementById("inputColor").value;
+ 	document.body.style.backgroundColor = x;
+}
+</script>
+
+<style>
+body{
+	text-align: center;
+}
+
+#dolph{
+	height: 246px;
+	background-image: url("dolph.png");
+}
+</style>
+</html>
